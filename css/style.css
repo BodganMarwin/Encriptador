@@ -119,11 +119,12 @@ nav li{
     resize: none;
 }
 .encriptadotablet{
-    width: 100%;
+    width: 336px;
     height: 781px;
     text-align: left;
     font-size: 24px;
     pointer-events: none;
+    overflow: hidden;
     border: none;
     background: none;
     outline: none;
