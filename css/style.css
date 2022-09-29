@@ -1,0 +1,261 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+main{
+}
+.desktop{
+    width: 1440px;
+    background: #F3F5FC;
+    margin: 0 auto;
+}
+nav li{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 0 0px;
+}
+.logo{
+    margin: 40px 0 0 84px;
+}
+.fomulario{
+    text-align: center;
+    margin: 168px 0 72px 0px;
+}
+.caja{
+    height: 700px;
+}
+.textoinicial{
+    width: 810px;
+    height: 690px;
+    font-weight: 400;
+    font-size: 32px;
+    color: #0A3871;
+    border: none;
+    background: none;
+    outline: none;
+    resize: none;
+}
+.frame1{
+    display: inline;
+    margin: 10px;
+}
+.informacion{
+    font-size: 12px;
+    /*margin: 10px 10px;*/
+}
+.botonencriptar{
+    background: #0A3871;
+    width: 328px;
+    font-size: 16px;
+    color: #ffffff;
+    border-radius: 24px;
+    border: 1px solid #D8DFE8;
+    padding: 24px;
+}
+.botonencriptar:hover{
+    background: #175aa5;
+    font-size: 18px;
+    font-weight: bold;
+}
+.botondesencriptar{
+    width: 328px;
+    font-size: 16px;
+    color: #0A3871;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    padding: 24px;
+    margin: 0 0 0 24px;
+}
+.botondesencriptar:hover{
+    background: #b0b7c0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.rectangulo{
+    position: relative;
+    width: 400px;
+    height: 944px;
+    background: #FFFFFF;
+    border-radius: 32px;
+    margin: 40px;
+    text-align: center;
+}
+.frame5{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.preguntaencriptado{
+    display: none;
+}
+.respuesta{
+    display: none;
+}
+.respuestaencriptado{
+    text-align: center;
+    display: block;
+}
+.titulomensaje{
+    font-weight: bold;
+    font-size: 24px;
+    color: #343A40;
+    padding: 30px;
+}
+.mensaje{
+    font-size: 16px;
+    color: #495057;
+}
+.encriptado{
+    width: 100%;
+    height: 781px;
+    text-align: left;
+    font-size: 24px;
+    pointer-events: none;
+    border: none;
+    background: none;
+    outline: none;
+    resize: none;
+}
+.copiar{
+    width: 328px;
+    font-size: 16px;
+    color: #0A3871;
+    background: #FFFFFF;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    padding: 24px;
+}
+.copiar:hover{
+    background: #D8DFE8;
+    font-size: 18px;
+    font-weight: bold;
+}
+@media screen and (max-width: 820px){
+    .desktop{
+        width: auto;
+    }
+    nav li{
+        display: block;
+        vertical-align: top;
+        margin: 0 auto;
+    }
+    nav li > div{
+        text-align: center;
+    }
+    .logo{
+        margin: 73px 0 0 40px;
+    }
+    .fomulario{
+        width: auto;
+        margin: 120px 0 0 0;
+        /*margin: 0 auto;*/
+    }
+    .caja{
+        height: 550px;
+    }
+    .textoinicial{
+        width: 688px;
+        height: 550px;
+    }
+    .frame1 li{
+        vertical-align: middle;
+        display: inline-block;
+    }
+    .rectangulo{
+        width: auto;
+        height: auto;
+        background: #FFFFFF;
+        border-radius: 32px;
+        margin: 40px;
+        text-align: center;
+    }
+    .frame5{
+        position: static;
+        top: 0;
+        left: 0;
+        transform: translate(0%, 0%);
+        padding: 32px 0 32px 0;
+    }
+    .muñeco{
+        display: none;
+    }
+    .titulomensaje{
+        padding: 0 0 8px 0;
+    }
+    .mensaje{
+        padding: 8px 0 0 0;
+    }
+    .respuestaencriptado{
+        margin: 0 32px 0 32px;
+    }
+    .encriptado{
+        width: 100%;
+        height: auto;
+    }
+    .encriptadotablet{
+        width: 100%;
+        height: 180px;
+        margin: 0 0 15px 0;
+        text-align: left;
+        font-size: 24px;
+        pointer-events: none;
+        border: none;
+        background: none;
+        outline: none;
+        resize: none;
+    }
+    .copiar{
+        width: 100%;
+        font-size: 16px;
+    }
+
+}
+@media screen and (max-width: 365px){
+    .desktop{
+        width: auto;
+    }
+    nav li{
+        display: block;
+        vertical-align: top;
+        margin: 0 auto;
+    }
+    nav li > div{
+        text-align: center;
+    }
+    .logo{
+        margin: 24px 0 0 16px;
+    }
+    .fomulario{
+        width: auto;
+        margin: 80px 0 0 0;
+        /*margin: 0 auto;*/
+    }
+    .caja{
+        height: 245px;
+    }
+    .textoinicial{
+        width: 343px;
+        height: 245px;
+    }
+    .frame1 li{
+        vertical-align: middle;
+        display: inline-block;
+    }
+    .frame3{
+        display: block;
+    }
+    .botondesencriptar{
+        margin: 24px 0 0 0;
+    }
+    .rectangulo{
+        width: auto;
+        height: auto;
+        background: #FFFFFF;
+        border-radius: 32px;
+        margin: 40px;
+        text-align: center;
+        margin: 24px 24px 40px 24px;
+    }
+}

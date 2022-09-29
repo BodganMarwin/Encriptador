@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=divice-width">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<script>
+    function cargarMensajeEncriptadoDesencriptado(mensaje) {
+        document.querySelector("#pregunta").className = "preguntaencriptado";
+        document.querySelector("#respuesta").className = "respuestaencriptado";
+        document.querySelector("#encriptadodesencriptado").className = "encriptadotablet";
+        document.querySelector("#encriptadodesencriptado").innerHTML = mensaje; //Cargamos en el texto encriptado o desencriptado
+    }
+    function encriptar() {
+        var texto = document.querySelector("#texto").value;
+        if (texto.length>0)
+        {
+            var res ="";
+            for (posicion=0; posicion<texto.length; posicion++){
+                switch (texto[posicion]){
+                    case 'a':
+                        res=res+"ai";
+                        break;
+                    case 'e':
+                        res=res+"enter";
+                        break;
+                    case 'i':
+                        res=res+"imes";
+                        break;
+                    case 'o':
+                        res=res+"ober";
+                        break;
+                    case 'u':
+                        res=res+"ufat";
+                        break;
+                    default:
+                        res = res +texto[posicion];
+                }
+                /*if (texto[posicion]=='a')
+                {
+                    res=res+"ai";
+                }
+                else{
+                    if (texto[posicion]=='e')
+                    {
+                        res=res+"enter";
+                    }
+                    else{
+                        if (texto[posicion]=='i')
+                        {
+                            res=res+"imes";
+                        }
+                        else{
+                            if (texto[posicion]=='o')
+                            {
+                                res=res+"ober";
+                            }
+                            else{
+                                if (texto[posicion]=='u')
+                                {
+                                    res=res+"ufat";
+                                }
+                                else{res = res +texto[posicion];
+                                    res = res +texto[posicion];
+                                }
+                            }
+                        }
+
+                    }
+                }*/
+            }
+            cargarMensajeEncriptadoDesencriptado(res);
+        }
+    }
+    function copiarencriptado() {
+        var texto = document.querySelector("#encriptadodesencriptado");
+        texto.select();
+        document.execCommand("copy")
+    }
+    function desencriptar() {
+        var texto = document.querySelector("#texto").value;
+        if (texto.length>0) {
+            var res = "";
+            for (posicion = 0; posicion < texto.length; posicion++) {
+                if (texto[posicion]=="a" && texto[posicion+1]=="i"){
+                    res = res + 'a';
+                    posicion++;
+                }
+                else {
+                    if (texto[posicion]=="e" && texto[posicion+1]=="n" && texto[posicion+2]=="t" && texto[posicion+3]=="e" && texto[posicion+4]=="r" ){
+                        res = res + 'e';
+                        posicion=posicion+4;
+                    }
+                    else{
+                        if (texto[posicion]=="i" && texto[posicion+1]=="m" && texto[posicion+2]=="e" && texto[posicion+3]=="s"){
+                            res = res + 'i';
+                            posicion=posicion+3;
+                        }
+                        else {
+                            if (texto[posicion]=="o" && texto[posicion+1]=="b" && texto[posicion+2]=="e" && texto[posicion+3]=="r"){
+                                res = res + 'o';
+                                posicion=posicion+3;
+                            }
+                            else {
+                                if (texto[posicion]=="u" && texto[posicion+1]=="f" && texto[posicion+2]=="a" && texto[posicion+3]=="t"){
+                                    res = res + 'u';
+                                    posicion=posicion+3;
+                                }
+                                else {
+                                    res = res +texto[posicion];
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            cargarMensajeEncriptadoDesencriptado(res);
+        }
+    }
+</script>
+<header></header>
+<main>
+    <div class="desktop">
+        <nav>
+            <ul>
+                <li>
+                    <h1><img src="imagenes/Logo.png" class="logo"></h1>
+                </li>
+                <li>
+                    <div class="fomulario">
+                        <!--<form id="formulario" action="index.html" method="post">-->
+                            <div class="caja">
+                                <textarea id="texto" class="textoinicial" required placeholder="Ingrese el texto aqui" ></textarea>
+                            </div>
+                            <div class="frame1">
+                                <ul>
+                                    <li><img class="exclamacion" src="imagenes/bi_exclamation-circle-fill.png"></li>
+                                    <li><p class="informacion">Solo letras minúsculas y sin acentos</p></li>
+                                </ul>
+
+                            </div>
+                            <div class="frame3">
+                                <input class="botonencriptar" type="submit" value="Encriptar" onclick="encriptar()">
+                                <input class="botondesencriptar" type="submit" value="Desencriptar" onclick="desencriptar()">
+                            </div>
+                        <!--</form>-->
+                    </div>
+                </li>
+                <li>
+                    <div class="rectangulo">
+                        <div id="frame5" class="frame5">
+                            <div id="pregunta" class="pregunta">
+                                <img id="muñeco" class="muñeco" src="imagenes/Muñeco.png">
+                                <p id="titulomensaje" class="titulomensaje">Ningún mensaje fue encontrado</p>
+                                <p id="mensaje" class="mensaje">Ingrese el texto que desees encriptar o desencriptar</p>
+                            </div>
+                            <div id="respuesta" class="respuesta">
+                                <textarea id="encriptadodesencriptado" class="encriptado"></textarea>
+                                <button id="copiar" class="copiar" onclick="copiarencriptado()">Copiar</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</main>
+</body>
+</html>
